@@ -34,5 +34,5 @@ Para desistalar:
 helm uninstall zabbix-helm-chrt kubernetes-helm -n monitoring
 ```
 
-
-
+Tutorial para configuração no zabbix.
+https://www.youtube.com/watch?v=Et2O2iyoCzI&t=600s
