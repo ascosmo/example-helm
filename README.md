@@ -28,9 +28,8 @@ helm install zabbix-helm-chrt kubernetes-helm -n monitoring
 ```
 Se der erro de dependences, comentar dependencias no arquivo Chart.yaml. Erro pode ser do metrics do kubernetes.
 
-Instalar novamente.
 
-Unistall:
+Para desistalar:
 ```
 helm uninstall zabbix-helm-chrt kubernetes-helm -n monitoring
 ```
