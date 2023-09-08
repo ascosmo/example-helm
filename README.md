@@ -64,6 +64,10 @@ WARNING: Kubernetes configuration file is world-readable. This is insecure. Loca
 chmod g-r ~/.kube/config\
 chmod 600 ~/.kube/config
 
-
 Tutorial para configuração no zabbix.\
 https://www.youtube.com/watch?v=Et2O2iyoCzI&t=600s
+
+Espose da secret serviceaccount:
+```
+kubectl get secret zabbix-service-account -o jsonpath={.data.token} | base64 -d
+```
