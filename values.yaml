@@ -11,7 +11,13 @@ serviceAccount:
 zabbixProxy:
   enabled: true
   containerSecurityContext: {}
-  resources: {}
+  resources:
+    limits:
+      cpu: 100m
+      memory: 128Mi
+    requests:
+      cpu: 50m
+      memory: 64Mi
   image:
     repository: zabbix/zabbix-proxy-sqlite3
     tag: alpine-trunk
@@ -57,7 +63,13 @@ zabbixProxy:
     subPath: ""
 zabbixAgent:
   enabled: true
-  resources: {}
+  resources:
+    limits:
+      cpu: 100m
+      memory: 128Mi
+    requests:
+      cpu: 50m
+      memory: 64Mi
   securityContext: {}
   containerSecurityContext: {}
   hostNetwork: true

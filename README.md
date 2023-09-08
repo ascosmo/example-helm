@@ -34,7 +34,7 @@ kubectl create namespace monitoring
 
 Para instalar: 
 ```
-helm install zabbix-helm-chrt Documents/zabbix/kubernetes-helm -n monitoring
+helm install zabbix-helm-chrt Documents/zabbix/kubernetes-helm -f values.yaml -n monitoring
 ```
 - zabbix-helm-chrt -> nome do chart
 - kubernetes-helm -> path dos arquivos do pacote
@@ -48,7 +48,7 @@ helm uninstall zabbix-helm-chrt Documents/zabbix/kubernetes-helm -n monitoring
 ```
 Para upgrade:
 ```
-helm upgrade zabbix-helm-chrt Documents/zabbix/kubernetes-helm -n monitoring
+helm upgrade zabbix-helm-chrt Documents/zabbix/kubernetes-helm -f values.yaml -n monitoring
 ```
 Outros comandos:
 - helm list
