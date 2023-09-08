@@ -18,14 +18,17 @@ Validar o chart:
 ```
 helm lint kubernetes-helm/
 ```
-Pegar o nome do chart para instalação no Chart.yaml no campo **name**
+Pegar o nome do chart para instalação no Chart.yaml no campo **name**, que no exemplo é ***zabbix-helm-chrt***
 
 Criar namespace **monitoring**
 
-Rodar instalacao: 
+Para instalar: 
 ```
 helm install zabbix-helm-chrt kubernetes-helm -n monitoring
 ```
+- zabbix-helm-chrt -> nome do chart
+- kubernetes-helm -> pasta dos arquivos do pacote
+
 Se der erro de dependences, comentar dependencias no arquivo Chart.yaml. Erro pode ser do metrics do kubernetes.
 
 
