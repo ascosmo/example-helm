@@ -33,13 +33,24 @@ Para desistalar:
 ```
 helm uninstall zabbix-helm-chrt kubernetes-helm -n monitoring
 ```
-
+Para upgrade:
+```
+helm upgrade zabbix-helm-chrt kubernetes-helm -n monitoring 
+```
 Outros comandos:
 - helm list
 - helm list -n monitoring
 - helm upgrade zabbix-helm-chrt 
 - helm history zabbix-helm-chrt 
 - helm rollback zabbix-helm-chrt 2
+
+Remover o warning:
+WARNING: Kubernetes configuration file is group-readable. This is insecure. Location: /Users/andre/.kube/config
+WARNING: Kubernetes configuration file is world-readable. This is insecure. Location: /Users/andre/.kube/config
+
+chmod g-r ~/.kube/config
+chmod 600 ~/.kube/config
+
 
 Tutorial para configuração no zabbix.
 https://www.youtube.com/watch?v=Et2O2iyoCzI&t=600s
