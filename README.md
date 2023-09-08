@@ -45,11 +45,11 @@ Outros comandos:
 - helm rollback zabbix-helm-chrt 2
 
 Remover o warning:\
-WARNING: Kubernetes configuration file is group-readable. This is insecure. Location: /Users/andre/.kube/config
+WARNING: Kubernetes configuration file is group-readable. This is insecure. Location: /Users/andre/.kube/config\
 WARNING: Kubernetes configuration file is world-readable. This is insecure. Location: /Users/andre/.kube/config
 
 chmod g-r ~/.kube/config\
-chmod 600 ~/.kube/config\
+chmod 600 ~/.kube/config
 
 
 Tutorial para configuração no zabbix.
