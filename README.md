@@ -52,5 +52,5 @@ chmod g-r ~/.kube/config\
 chmod 600 ~/.kube/config
 
 
-Tutorial para configuração no zabbix.
+Tutorial para configuração no zabbix.\
 https://www.youtube.com/watch?v=Et2O2iyoCzI&t=600s
