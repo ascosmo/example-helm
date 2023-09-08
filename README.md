@@ -48,7 +48,7 @@ helm uninstall zabbix-helm-chrt Documents/zabbix/kubernetes-helm -n monitoring
 ```
 Para upgrade:
 ```
-helm upgrade zabbix-helm-chrt kubernetes-helm -n monitoring 
+helm upgrade zabbix-helm-chrt Documents/zabbix/kubernetes-helm -n monitoring
 ```
 Outros comandos:
 - helm list
