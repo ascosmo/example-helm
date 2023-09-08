@@ -1,10 +1,10 @@
 # example-helm
 Example Helm
 
-Zabbix
+Zabbix Agent / Zabbix Proxy\
 https://git.zabbix.com/projects/ZT/repos/kubernetes-helm/browse?at=refs%2Fheads%2Frelease%2F6.4
 
-Clone:
+Clone:\
 git clone https://git.zabbix.com/scm/zt/kubernetes-helm.git
 
 Copiar a pasta kubernetes-helm para server destino.
@@ -18,23 +18,33 @@ Validar o chart:
 ```
 helm lint kubernetes-helm/
 ```
+
+Validar template:
+```
+helm template Documents/zabbix/kubernetes-helm/
+```
+
 Pegar o nome do chart para instalação no Chart.yaml no campo **name**, que no exemplo é ***zabbix-helm-chrt***
 
 Criar namespace **monitoring**
 
+```
+kubectl create namespace monitoring
+```
+
 Para instalar: 
 ```
-helm install zabbix-helm-chrt kubernetes-helm -n monitoring
+helm install zabbix-helm-chrt Documents/zabbix/kubernetes-helm -n monitoring
 ```
 - zabbix-helm-chrt -> nome do chart
-- kubernetes-helm -> pasta dos arquivos do pacote
+- kubernetes-helm -> path dos arquivos do pacote
 
 Se der erro de dependences, comentar dependencias no arquivo Chart.yaml. Erro pode ser do metrics do kubernetes.
 
 
 Para desistalar:
 ```
-helm uninstall zabbix-helm-chrt kubernetes-helm -n monitoring
+helm uninstall zabbix-helm-chrt Documents/zabbix/kubernetes-helm -n monitoring
 ```
 Para upgrade:
 ```
